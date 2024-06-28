@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Links</title>
+  <style>
+    /* 将整个导航栏包裹在一个flex容器内 */
+    .nav-container {
+      display: flex;
+      justify-content: center; /* 水平居中 */
+      align-items: center;
+      padding: 10px 0; /* 顶部和底部内边距 */
+      background-color:rgba(255, 255, 255, 0); /* 背景颜色，根据需要调整 */
+    }
+
+    /* 链接的基础样式 */
+    a {
+      color: rgb(245, 243, 243); /* 文字颜色 */
+      text-decoration: none; /* 去除下划线 */
+      margin: 0 1cm; /* 链接之间的外边距 */
+      transition: color 0.3s ease, transform 0.3s ease; /* 平滑过渡效果 */
+    }
+
+    /* 鼠标悬停时的动态效果 */
+    a:hover {
+      color: #a200ff; /* 鼠标悬停时的文字颜色 */
+      transform: scale(1.1); /* 鼠标悬停时放大 */
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-container">
+    <!-- 导航链接 -->
+  <h3><a href="/">大学生就业避坑指南</a></h3>
+    <h3><a href="/jianli/">简历定制</a></h3>
+   <h3> <a href="/laodonghetong/">劳动合同说明</a></h3>
+   <h3> <a href="/shiyongqi/">试用期说明</a></h3>
+   <h3><a href="/guanyuwm/">关于我们</a></h3>
+  </div>
+</body>
+</html>

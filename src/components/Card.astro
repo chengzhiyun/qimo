@@ -1,0 +1,93 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	href: string;
+}
+
+const { href, title, body } = Astro.props;
+---
+
+<li class="link-card">
+	<a href={href}>
+		<h2>
+			{title}
+			<span>&rarr;</span>
+		</h2>
+		<p>
+			{body}
+		</p>
+	</a>
+</li>
+<style>
+	.link-card {
+		list-style: none;
+		display: flex;
+		padding: 1px;
+		background-color: #ba9ff6;
+		background-image: none;
+		background-size: 100%;
+		border-radius: 7px;
+		background-position: 100%;
+		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		box-shadow: inset 0 0 0 1px rgba(254, 5, 5, 0.1);
+	}
+	.link-card > a {
+		height: 320px;
+		width: 300px;
+		text-decoration: none;
+		line-height: 1.4;
+		padding: calc(1.5rem - 1px);
+		border-radius: 8px;
+		color: white;
+		background-color: #000000;
+		opacity: 0.8;
+	}
+	.link-card-gaofen > a {
+		height: 180px;
+		width: 300px;
+		text-decoration: none;
+		line-height: 1.4;
+		padding: calc(1.5rem - 1px);
+		border-radius: 8px;
+		color: white;
+		background-color: #000000;
+		opacity: 0.8;
+	}
+	.link-card-secondary {
+    list-style: none;
+    display: flex;
+    padding: 1px;
+    background-color: hsl(0, 0%, 96%);
+    background-image: url('image.jpg'); /* 将这里的 'image.jpg' 替换为实际的图片路径 */
+    background-size: cover; /* 根据需要调整背景图片的尺寸 */
+    background-position: center; /* 将图片居中显示 */
+    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: inset 0 0 0 1px rgba(90, 211, 255, 0.1);
+    height: 460px;
+    width: 500px;
+    text-decoration: none;
+    line-height: 1.4;
+    padding: calc(1.5rem - 1px);
+    border-radius: 8px; /* 这里和上面的 7px 重复了，选择一个即可 */
+    color: white;
+    background-color: #fbfbfb; /* 这个属性和背景图片可能会冲突，根据需要选择 */
+    opacity: 0.8;
+}
+	h2 {
+		margin: 0;
+		font-size: 1.25rem;
+		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	p {
+		margin-top: 0.5rem;
+		margin-bottom: 0;
+	}
+	.link-card:is(:hover, :focus-within) {
+		background-position: 0;
+		background-image: var(--accent-gradient);
+	}
+	.link-card:is(:hover, :focus-within) h2 {
+		color: rgb(var(--accent-light));
+	}
+</style>

@@ -1,0 +1,123 @@
+---
+// 导入Astro布局和组件
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import HeaderNavigation from '../components/Nav.astro';
+---
+
+<Layout title="Welcome to Astro.">
+    <main>
+        <!-- 背景图片 -->
+        <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url('${BEIJING}'); background-size: cover; background-position: center; pointer-events: none; z-index: -1;"></div>
+        
+        <!-- SVG图形 -->
+        <svg
+            class="astro-a"
+            width="495"
+            height="623"
+            viewBox="0 0 495 623"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"  
+            aria-hidden="true"
+            style="position: absolute; top: 50px; left: 50%; transform: translateX(-50%); z-index: 1;"
+        >
+            <!-- SVG路径 -->
+        </svg>
+        
+        <!-- 导航 -->
+        <HeaderNavigation />
+        
+        <!-- 主标题 -->
+        <h1 class="text-gradient">关于我们</span></h1>
+        
+        <!-- 插入的图片 -->
+       
+		<!-- 文本内容 -->
+        <section>
+           <h3> <p style="text-align: center;">本网站在对于大学生求职过程中避免出现自身利益被损害的现象具有重要引导作用</p></h3>
+		   <h3> <p style="text-align: center;">同时，本网站最大的一个特点就是可以定制专属于你自己的个人简历</p></h3>
+		   <h3> <p style="text-align: center;">	但定制简历需要花费一定金额，我们会根据你的需求计算出具体金额</p></h3>
+		   <img src="https://img1.baidu.com/it/u=1406770477,3141892968&fm=253&fmt=auto&app=138&f=PNG?w=800&h=450" 
+		   style="width: 100%; max-width: 700px; margin: 2rem auto 1em; display: block; border-radius: 10px;"/>
+		   <h2> <p style="text-align: center;"> 请放心，你所花费的金额会变现成一份包你满意的简历 </p></h2>
+		   <h3> <p style="text-align: center;">  并且这份简历会成为你人生道路上漂亮的一笔</p></h3>
+		   <h3> <p style="text-align: center;">  心动不如行动</p></h3>
+		   <h3> <p style="text-align: center;">   请赶快按照以下的邮箱地址发送您的需求吧！</p></h3>
+		   <h3> <p style="text-align: center;">  邮箱地址：2521286984@qq.com </p></h3>
+		   <h3> <p style="text-align: center;"> 若对本网站有更好的建议或需要，也请通过以上邮箱联系我们，我们等着您的光顾。</p></h3>
+		</section>
+        
+        <!-- 其他内容 -->
+        <!-- ... -->
+    </main>
+</Layout>
+<style>
+
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 1000px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 17px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	h2{
+		color: rgb(237, 9, 9);
+		font-size: 30px;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: rgb(254, 253, 254);
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+</style>
+<style>
+	body,html{
+		 margin: 0;
+		 padding: 0;
+		 height: 100%;
+		 min-height: 100%;
+		 background-image: url('https://img2.baidu.com/it/u=2371931549,1070125138&fm=253&fmt=auto&app=138&f=JPEG?w=640&h=300');
+		 background-size: cover;
+		 background-position: center;
+		 background-repeat: no-repeat;
+		 background-attachment: fixed;
+	}
+</style>

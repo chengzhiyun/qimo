@@ -1,0 +1,78 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	buttonText: string;
+  imageSrc: string;
+}
+const { imageSrc, title, description, buttonText } = Astro.props;
+---
+
+<aside class="1">
+  <img src={imageSrc} alt="Card image" class="card-img" />
+  <div class="card-content">
+    <h3 class="card-title">{title}</h3>
+    <p class="card-description">{description}</p>
+    <button class="card-button">{buttonText}</button>
+  </div>
+</aside>
+---
+<style>
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 300px;
+      max-width: 100%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .card:hover {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  
+    .card-img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+  
+    .card-img:hover {
+      transform: scale(1.05);
+    }
+  
+    .card-content {
+      padding: 20px;
+    }
+  
+    .card-title {
+      margin: 0;
+      color: #333;
+      font-size: 1.5rem;
+    }
+  
+    .card-description {
+      color: #666;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+  
+    .card-button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin-top: 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+    .card-button:hover {
+      background-color: #0056b3;
+    }
+  </style>

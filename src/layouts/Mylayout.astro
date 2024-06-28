@@ -1,0 +1,32 @@
+---
+import NavigationBar from "../components/Nav.astro";
+import Footer from "../components/Nav.astro";
+const { title } =Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <NavigationBar />
+
+    <slot />
+    <Footer />
+</body>
+</html>
+<style>
+    body {
+        background-color: black;
+        color: rgb(255, 0, 0);
+        width: 800px;
+        margin: 2em auto;
+    }
+    main {
+        width: 800px;
+        margin: 2em auto;
+        }
+</style>
